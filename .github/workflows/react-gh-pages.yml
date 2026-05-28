@@ -1,0 +1,16 @@
+name: Deploy React to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
